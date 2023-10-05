@@ -86,7 +86,7 @@ footer p {
     margin-top: 1.6875rem;
 }
 
-@media (min-width:600px) {
+@media (min-width:750px) {
     .logoImg {
         width: 90px;
     }
