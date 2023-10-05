@@ -68,6 +68,14 @@ h1 span {
     fill: var(--clr-blue);
 }
 
+.icon-circle:hover .icon {
+    fill: white;
+}
+
+.icon-circle:hover {
+    background-color: var(--clr-blue);
+}
+
 footer {
     margin-top: 3rem;
 }
