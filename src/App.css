@@ -1,9 +1,39 @@
+.wrapper {
+    margin: 5rem 2rem 2rem 2rem;
 
+    display: grid;
+    gap: 4.5rem
+}
 
+.container {
+    max-width: 600px;
+}
+
+.card-container {
+    display: grid;
+    gap: 2rem;
+    padding: 0 .6876rem;
+}
+
+.centered {
+    margin-inline: auto;
+}
+
+.dashboard {
+    max-width: 320px;
+}
+
+.logoImg {
+    width: 56px;
+}
 
 h1 {
     font-size: 1.375rem;
     color: var(--clr-grey);
+}
+
+h1 {
+    font-weight: var(--fw-light);
 }
 
 h1 span {
@@ -11,8 +41,19 @@ h1 span {
     font-weight: var(--fw-bold);
 }
 
+.card-container_info p {
+    color: var( --clr-dark-blue) ;
+    margin-top: .9375rem;
+}
+
+.button {
+    margin-top: .625rem;
+}
+
 .flex-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: .7319rem;
 }
 
@@ -23,11 +64,47 @@ h1 span {
 }
 
 .icon {
-    width: 32px;
+    width: 15px;
     fill: var(--clr-blue);
+}
+
+footer {
+    margin-top: 3rem;
 }
 
 footer p {
     font-size: .625rem;
     color: var(--clr-grey);
+    margin-top: 1.6875rem;
+}
+
+@media (min-width:600px) {
+    .logoImg {
+        width: 90px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .card-container {
+        gap: 2.5rem;
+    }
+
+    .card-container_info p  {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        max-width: 640px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer p {
+        font-size: .75rem;
+        margin-top: 1.5625rem;
+    }
 }

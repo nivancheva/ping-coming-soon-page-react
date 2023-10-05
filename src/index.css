@@ -48,22 +48,53 @@ body {
     color: white;
     padding: .75rem;
     border-radius: 2em;
-    width: 100%;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: var(--clr-pale-blue) 0px 8px 24px;
 }
 
 .input {
-    border-color: var(--clr-pale-blue);
+    border: 1px solid var(--clr-pale-blue);
     font-size: .75rem;
     padding: .75rem;
     border-radius: 2em;
-    width: 100%;
+    cursor: text;
+}
+
+a {
+    cursor: pointer;
 }
 
 ::placeholder {
     color: var(--clr-pale-blue);
     opacity: 1; /* Firefox */
-  }
+}
   
-  ::-ms-input-placeholder { /* Edge 12 -18 */
+::-ms-input-placeholder { /* Edge 12 -18 */
     color: var(--clr-pale-blue);
-  }
+}
+
+@media (max-width:599px) {
+    .button, .input {
+        width: 100%;
+    }
+}
+
+@media (min-width:600px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .button {
+        margin-top: 0;
+        margin-left: 1rem;
+        padding: 1.1875rem 3.93rem;
+    }
+
+    .input {
+        padding: 1.1875rem 15rem 1.1875rem 1.1875rem;
+    }
+
+}
