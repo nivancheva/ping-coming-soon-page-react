@@ -1,8 +1,28 @@
 import './App.css'
 import logo from './images/logo.svg';
 import illustrationDashboard from './images/illustration-dashboard.png';
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+
+const schema = yup
+  .object({
+    email: yup.string().email().required(),
+  });
 
 function App() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  function notifyMe(data) {
+    console.log(data);
+  }
+  
   return (
     <div className='wrapper'>
       <div className='card-container container centered'>
@@ -12,13 +32,15 @@ function App() {
           <p>Subscribe and get notified</p>
         </div>
         <div className='container'>
-          <input 
-            id='email'
-            className='input'
-            name='email'
-            placeholder='Your email address...'
-          />
-          <button className='button'>Notify Me</button>
+          <form onSubmit={handleSubmit(notifyMe)}>
+            <input 
+              {...register("email")}
+              className='input'
+              placeholder='Your email address...'
+            />
+            <button className='button'>Notify Me</button>
+            {errors.email?.message && <p>{errors.email?.message}</p>}
+          </form>
         </div>
       </div>
 
