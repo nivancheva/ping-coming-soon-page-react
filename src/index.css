@@ -38,4 +38,32 @@ body {
     font-family: var(--ff-main);
     font-weight: var(--fw-light);
     font-size: var(--fz-main);
+    text-align: center;
+    font-size: .75rem;
 }
+
+.button {
+    border: 0;
+    background-color: var(--clr-blue);
+    color: white;
+    padding: .75rem;
+    border-radius: 2em;
+    width: 100%;
+}
+
+.input {
+    border-color: var(--clr-pale-blue);
+    font-size: .75rem;
+    padding: .75rem;
+    border-radius: 2em;
+    width: 100%;
+}
+
+::placeholder {
+    color: var(--clr-pale-blue);
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--clr-pale-blue);
+  }
