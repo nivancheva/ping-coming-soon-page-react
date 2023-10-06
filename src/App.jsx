@@ -31,15 +31,15 @@ function App() {
           <h1>We are launching <span>soon!</span></h1>
           <p>Subscribe and get notified</p>
         </div>
-        <div className='container'>
+        <div className='container input-error'>
           <form onSubmit={handleSubmit(notifyMe)}>
             <input 
               {...register("email")}
-              className='input'
+              className={`input${errors.email?.message ? " inputIfError" : ""}`}
               placeholder='Your email address...'
             />
             <button className='button'>Notify Me</button>
-            {errors.email?.message && <p>{errors.email?.message}</p>}
+            {errors.email?.message && <p className='errors'>{errors.email?.message}</p>}
           </form>
         </div>
       </div>

@@ -76,6 +76,15 @@ a {
     color: var(--clr-pale-blue);
 }
 
+.input-error {
+    position: relative;
+}
+
+.inputIfError {
+    margin-bottom: 1rem;
+    border: 1px solid var(--clr-red);
+}
+
 @media (max-width:749px) {
     .button, .input {
         width: 100%;
@@ -90,11 +99,14 @@ a {
     .button {
         margin-top: 0;
         margin-left: 1rem;
-        padding: 1.1875rem 3.93rem;
+        padding: 1.1875rem 3rem;
+        display: inline;
     }
 
     .input {
-        padding: 1.1875rem 15rem 1.1875rem 1.1875rem;
+        padding: 1.1875rem 10rem 1.1875rem 1.1875rem;
+        font-size: 1rem;
+        display: inline;
     }
 
 }
